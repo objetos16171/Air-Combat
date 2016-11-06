@@ -8,12 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class eneAvion extends Actor
 {
+    private int tam = 10;
+    private int velX;
+    private int velY = 2;
     /**
      * Act - do whatever the eneAvion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        muevete();
+    }
+    
+    public void muevete()
+    {
+        {
+            setLocation(getX() + velX, getY() + velY);
+            
+            if(getX()<tam||getX()>=480-tam)
+            {
+                velX=-1*velX;
+            }
+            
+            if(getY()-tam<=tam)
+            {
+                velY=-1*velY;
+            }
+        }
+    }
 }
