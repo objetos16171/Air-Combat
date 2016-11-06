@@ -27,12 +27,26 @@ public class Avion extends Actor
         }
     }
     
+    /**
+     * decide que clase de proyectil se dispara
+     * dispara el proyectil
+     */
     public void dispara()
     {
         if(Greenfoot.isKeyDown("space"))
         {
-            
+           GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda cuando se reemplaze
+           Bala bala = new Bala();
+           World mundo = getWorld();
+           ((World)mundo).addObject(bala,getX(),getY()-60); //coloca la bala justo enfrente del avion
+           AvionDisparo aviond = new AvionDisparo();
+           setImage(aviond.getImage()); //remplaza la imagen del avion por una que simula disparo
+           Greenfoot.delay(1); //retrazo para permitir ver la animacion
+           setImage(image);
         }
+        
+       
     }
+    
         
 }

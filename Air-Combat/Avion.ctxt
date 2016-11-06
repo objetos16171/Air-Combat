@@ -8,4 +8,5 @@ comment2.params=
 comment2.target=void\ muevete()
 comment3.params=
 comment3.target=void\ dispara()
+comment3.text=\r\n\ decide\ que\ clase\ de\ proyectil\ se\ dispara\r\n\ dispara\ el\ proyectil\r\n
 numComments=4
