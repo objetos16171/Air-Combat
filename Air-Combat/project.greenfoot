@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Nov 07 10:16:42 CST 2016
+#Mon Nov 07 10:28:53 CST 2016
 target4.type=ClassTarget
 <<<<<<<=Updated upstream
 target8.showInterface=false
@@ -26,7 +26,7 @@ dependency4.type=UsesDependency
 >>>>>>>=Stashed changes
 class.Bala.image=Bala.png
 target2.width=80
-class.Mundo1.image=space1.jpg
+class.Mundo1.image=Fondo-de-pantalla-El-espacio.jpg
 target5.name=eneHeli
 class.eneBarco.image=phaser_v036_atlas.png
 version=2.8.0

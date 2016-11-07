@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class eneAvion here.
+ * Write a description of class eneBarco here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class eneAvion extends Actor
+public class Barco extends Actor
 {
     private int tam = 10;
     private int velX;
@@ -28,11 +28,6 @@ public class eneAvion extends Actor
             if(getX()<tam||getX()>=480-tam)
             {
                 velX=-1*velX;
-            }
-            
-            if(getY()-tam<=tam)
-            {
-                velY=-1*velY;
             }
         }
     }
