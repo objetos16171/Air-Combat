@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Avion
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Avion\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Avion\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Avion\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Avion\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ muevete()
 comment3.params=
 comment3.target=void\ dispara()
-comment3.text=\r\n\ decide\ que\ clase\ de\ proyectil\ se\ dispara\r\n\ dispara\ el\ proyectil\r\n
+comment3.text=\n\ decide\ que\ clase\ de\ proyectil\ se\ dispara\n\ dispara\ el\ proyectil\n
 numComments=4
