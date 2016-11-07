@@ -17,16 +17,18 @@ public class Avion extends Actor
         muevete();
         dispara();
     }
-    
-    public void muevete()
+    public void muevete()//metodo para realizar los movimientos del avion con las teclas
     {
-        if(Greenfoot.isKeyDown("up")) //moverce hacia arriba
-        {
-            setLocation(getX(),getY()-1);
-            
-        }
+        setLocation(getX(), getY());//se obtinen las variables de ubicacion del objeto
+        if(Greenfoot.isKeyDown("left") && getX() > 45)//se verifica que se presione la tecla left y si ha golpeado la pared izquierda
+            move(-1);//se mueve hacia la izquierda el avion
+        if(Greenfoot.isKeyDown("right") && getX() < 480-45)//se verifica que se presione la tecla left y si ha golpeado la pared derecha
+            move(1);//se mueve hacia la derecha el avion
+        if(Greenfoot.isKeyDown("down") && getY() < 600-40)//se verifica que se presione la tecla down y si ha golpeado la pared de abajo
+            setLocation(getX(), getY()+1);//se mueve hacia abajo el avion
+        if(Greenfoot.isKeyDown("up") && getY() > 40)//se verifica que se presione la tecla up y si ha golpeado la pared de arriba
+            setLocation(getX(), getY()-1);//se mueve hacia arriba el avion
     }
-    
     /**
      * decide que clase de proyectil se dispara
      * dispara el proyectil
@@ -44,9 +46,5 @@ public class Avion extends Actor
            Greenfoot.delay(1); //retrazo para permitir ver la animacion
            setImage(image);
         }
-        
-       
     }
-    
-        
 }
