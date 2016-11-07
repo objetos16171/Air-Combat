@@ -16,6 +16,8 @@ public class Mundo1 extends World
 
     private Bala bala; //se declara una clase bala
     private int proyectil; //indica que tipo de proyectil se dispara
+    private int numVidas = 3;//variable del contador de vidas del avion
+    private Letrero textoVidas = null;//inicializacion de un texto para el contador de vidas
   
     public Mundo1()
     {    
@@ -26,6 +28,19 @@ public class Mundo1 extends World
     public void act()
     {
 
+    }
+    public void modificaContador()//metodo para reducir el contador de vidas y cambiar el texto
+    {
+       numVidas--;//reduce el numero de vidas del avion
+       if (numVidas <= 0)//verifica si se terminaron las vidas
+       {
+           textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
+           Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
+       }
+       else
+       {
+          textoVidas.setText("Vidas: " + numVidas);//envia un texto para modificar el mensaje a mostrar en el letrero
+       }
     }
 
     /*public void colocaProyectil() //coloca un proyectil para derrivar un enemigo
@@ -49,5 +64,7 @@ public class Mundo1 extends World
     {
         Avion avion = new Avion();
         addObject(avion,240,560);
+        Letrero textoVidas = new Letrero("Vidas: " + numVidas);
+        addObject(textoVidas,36,37);
     }
 }
