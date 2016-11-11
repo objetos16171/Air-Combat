@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemigos extends Actor
 {
+    
     public void act() 
     {
         move(4);
@@ -15,5 +16,6 @@ public class Enemigos extends Actor
         {
            turn(Greenfoot.getRandomNumber(90)); 
         }
-    }    
+    }   
+   
 }

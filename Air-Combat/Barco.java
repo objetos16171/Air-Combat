@@ -35,6 +35,14 @@ public class Barco extends Enemigos
             {
                 velX=-1*velX;
             }
+            
+            if(getY()<=tam||getY()>=480-tam)
+            {
+              World mundo = getWorld();
+              getWorld().removeObject(this);
+              //((Mundo1)mundo).newAvionene();
+            }
+            
         }
     }
 }

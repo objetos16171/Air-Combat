@@ -18,17 +18,42 @@ public class Mundo1 extends World
     private int proyectil; //indica que tipo de proyectil se dispara
     private int numVidas = 3;//variable del contador de vidas del avion
     private Letrero textoVidas = null;//inicializacion de un texto para el contador de vidas
-  
+    public final int TIEMPO_ENEMIGO = 15;
+    private SimpleTimer reloj;
+    private int xe; 
     public Mundo1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(480, 600, 1);
+        reloj = new SimpleTimer();
         prepare();
     }
     
     public void act()
     {
-       Barco barco = new Barco();
+      if(reloj.millisElapsed() > 3000)
+        {
+           xe = Greenfoot.getRandomNumber(3);
+           if(xe == 0)
+           {
+               Barco barco = new Barco();
+               addObject(barco, Greenfoot.getRandomNumber(470) + 10, 10);
+           }
+           else
+           if(xe == 1)
+           {
+              Helicoptero heli = new Helicoptero();
+              addObject(heli, Greenfoot.getRandomNumber(470) + 10, 10); 
+           }
+           else
+           if(xe == 2)
+           {
+              AvionEne AvE = new AvionEne();
+              addObject(AvE, Greenfoot.getRandomNumber(470) + 10, 10); 
+           }
+           reloj.mark();
+           
+        }
     }
     
     public void modificaContador()//metodo para reducir el contador de vidas y cambiar el texto
