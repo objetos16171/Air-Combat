@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AvionEne extends Actor
+public class AvionEne extends Enemigos
 {
     private int tam = 10;
-    private int velX;
+    private int velX = 2;
     private int velY = 2;
     /**
      * Act - do whatever the eneAvion wants to do. This method is called whenever

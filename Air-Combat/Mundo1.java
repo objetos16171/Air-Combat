@@ -22,13 +22,15 @@ public class Mundo1 extends World
     public Mundo1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(480, 600, 1); 
+        super(480, 600, 1);
         prepare();
     }
+    
     public void act()
     {
-
+       Barco barco = new Barco();
     }
+    
     public void modificaContador()//metodo para reducir el contador de vidas y cambiar el texto
     {
        numVidas--;//reduce el numero de vidas del avion
