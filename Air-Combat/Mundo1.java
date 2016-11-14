@@ -14,6 +14,7 @@ public class Mundo1 extends World
      * 
      */
 
+    GreenfootSound myMusic = new GreenfootSound("M1.mp3");
     private Bala bala; //se declara una clase bala
     private int proyectil; //indica que tipo de proyectil se dispara
     private int numVidas = 3;//variable del contador de vidas del avion
@@ -24,6 +25,7 @@ public class Mundo1 extends World
     public Mundo1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(480, 600, 1);
         reloj = new SimpleTimer();
         prepare();
@@ -31,6 +33,7 @@ public class Mundo1 extends World
     
     public void act()
     {
+        myMusic.playLoop();
       if(reloj.millisElapsed() > 3000)
         {
            xe = Greenfoot.getRandomNumber(3);
