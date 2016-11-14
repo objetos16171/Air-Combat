@@ -11,6 +11,10 @@ public class AvionEne extends Enemigos
     private int tam = 10;
     private int velX = 2;
     private int velY = 2;
+    private SimpleTimer reloj;
+    public AvionEne(){
+        reloj = new SimpleTimer();
+    }
     /**
      * Act - do whatever the eneAvion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,6 +22,10 @@ public class AvionEne extends Enemigos
     public void act() 
     {
         muevete();
+        if(reloj.millisElapsed() > 1000){
+           disparaEnemigo();
+           reloj.mark();
+        }
         elimina();
     }
     
@@ -64,5 +72,14 @@ public class AvionEne extends Enemigos
          World mundo = getWorld();
          getWorld().removeObject(this);
       }
+    }
+    public void disparaEnemigo()
+    {
+            GreenfootImage image = getImage();
+            BalaE balaE = new BalaE();
+            World mundo = getWorld();
+            ((World)mundo).addObject(balaE, getX(), getY()+100);
+            //Greenfoot.delay(1);
+            setImage(image); 
     }
 }

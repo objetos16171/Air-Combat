@@ -95,7 +95,7 @@ public class Mundo1 extends World
     {
         addObject(new Avion(),240,560);
         textoVidas = new Letrero("Vidas: " + numVidas);
-        addObject(textoVidas,30,90);
+        addObject(textoVidas,30,30);
         textoVidas.setText("Vidas: " + numVidas);
     }
 }
