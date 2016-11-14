@@ -24,25 +24,40 @@ public class Barco extends Enemigos
     public void act() 
     {
         muevete();
+        elimina();
     }
     
     public void muevete()
     {
-        {
-            setLocation(getX() + velX, getY() + velY);
+       setLocation(getX() + velX, getY() + velY); 
+       if(getX()<tam||getX()>=480-tam)
+       {
+          velX=-1*velX;
+       }
             
-            if(getX()<tam||getX()>=480-tam)
-            {
-                velX=-1*velX;
-            }
-            
-            if(getY()<=tam||getY()>=480-tam)
-            {
-              World mundo = getWorld();
-              getWorld().removeObject(this);
-              //((Mundo1)mundo).newAvionene();
-            }
-            
-        }
+       //if(getY()<=tam||getY()>=480-tam)
+       //{
+       //  World mundo = getWorld();
+       //  getWorld().removeObject(this);
+       //}
+    }
+    
+    public void elimina()
+    {
+      if(getY()<=tam||getY()>=480-tam)
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this); 
+      }  
+      else if(isTouching(Bala.class))
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this);
+      }
+      else if(isTouching(Bomba.class)) 
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this);
+      }
     }
 }

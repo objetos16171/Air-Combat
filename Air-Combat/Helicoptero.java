@@ -19,5 +19,20 @@ public class Helicoptero extends Enemigos
         {
            turn(Greenfoot.getRandomNumber(90)); 
         }
-    }    
+        elimina();
+    }
+    
+    public void elimina()
+    {
+      if(isTouching(Bala.class))
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this);
+      }
+      else if(isTouching(Bomba.class))
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this);
+      }
+    }
 }

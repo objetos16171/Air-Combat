@@ -15,7 +15,7 @@ public class Bala extends Actor
     private int velBala=2; //variable para indicar la velocidad a la que se mueve la bala
     public void act() 
     {
-        muevete();
+        muevete(); 
     }
     
     public void muevete() //metodo lograr el movimiento de la bala
@@ -27,5 +27,4 @@ public class Bala extends Actor
             ((Mundo1)mundo).removeObject(this); //borra la bala al llegar al borde de la pantalla
         }
     }
-    
 }
