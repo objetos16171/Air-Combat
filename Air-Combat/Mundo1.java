@@ -59,7 +59,7 @@ public class Mundo1 extends World
         }
     }
     
-    public void modificaContador()//metodo para reducir el contador de vidas y cambiar el texto
+    public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
     {
        numVidas--;//reduce el numero de vidas del avion
        if (numVidas <= 0)//verifica si se terminaron las vidas
@@ -69,6 +69,7 @@ public class Mundo1 extends World
        }
        else
        {
+          addObject(new Avion(), 200, 560);
           textoVidas.setText("Vidas: " + numVidas);//envia un texto para modificar el mensaje a mostrar en el letrero
        }
     }
@@ -92,9 +93,9 @@ public class Mundo1 extends World
      */
     private void prepare()//inicializacion de los objetos
     {
-        Avion avion = new Avion();
-        addObject(avion,240,560);
-        Letrero textoVidas = new Letrero("Vidas: " + numVidas);
-        addObject(textoVidas,36,37);
+        addObject(new Avion(),240,560);
+        textoVidas = new Letrero("Vidas: " + numVidas);
+        addObject(textoVidas,30,30);
+        textoVidas.setText("Vidas: " + numVidas);
     }
 }

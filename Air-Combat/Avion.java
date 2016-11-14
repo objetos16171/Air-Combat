@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Avion extends Actor
 {
+    private SimpleTimer reloj;
+    public Avion(){
+        reloj = new SimpleTimer();
+    }
     /**
      * Act - do whatever the Avion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,6 +21,11 @@ public class Avion extends Actor
         muevete();
         dispara();
         bomba();
+        if(isTouching(Enemigos.class)||isTouching(BalaE.class)){
+            World mundo = getWorld();
+            ((Mundo1)mundo).pierdeVida();
+            getWorld().removeObject(this);
+        }
     }
     public void muevete()//metodo para realizar los movimientos del avion con las teclas
     {
@@ -36,7 +45,7 @@ public class Avion extends Actor
      */
     public void dispara()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("space") && reloj.millisElapsed() > 300)
         {
            GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda cuando se reemplaze
            Bala bala = new Bala();
@@ -46,6 +55,7 @@ public class Avion extends Actor
            setImage(aviond.getImage()); //remplaza la imagen del avion por una que simula disparo
            Greenfoot.delay(1); //retrazo para permitir ver la animacion
            setImage(image);
+           reloj.mark();
         }
     }
     
