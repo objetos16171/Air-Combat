@@ -16,6 +16,7 @@ public class Avion extends Actor
     {
         muevete();
         dispara();
+        bomba();
     }
     public void muevete()//metodo para realizar los movimientos del avion con las teclas
     {
@@ -45,6 +46,19 @@ public class Avion extends Actor
            setImage(aviond.getImage()); //remplaza la imagen del avion por una que simula disparo
            Greenfoot.delay(1); //retrazo para permitir ver la animacion
            setImage(image);
+        }
+    }
+    
+    public void bomba()
+    {
+        if(Greenfoot.isKeyDown("b"))
+        {
+            GreenfootImage image = getImage();
+            Bomba bomba = new Bomba();
+            World mundo = getWorld();
+            ((World)mundo).addObject(bomba, getX(), getY()-60);
+            Greenfoot.delay(1);
+            setImage(image); 
         }
     }
 }
