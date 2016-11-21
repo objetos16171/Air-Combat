@@ -21,6 +21,7 @@ public class BombaMej extends Item
     {
         Animacion(); //llamada a metodo animacion
         Rebota();
+        Toma();
     }
     
     public void Animacion()
@@ -51,5 +52,14 @@ public class BombaMej extends Item
        {
            velY=-1*velY; 
        }
+    }
+    
+    public void Toma()
+    {
+      if(isTouching(Avion.class))
+      {
+         World mundo = getWorld();
+         getWorld().removeObject(this);
+      }
     }
 }
