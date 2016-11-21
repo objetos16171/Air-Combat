@@ -73,6 +73,7 @@ public class AvionEne extends Enemigos
          getWorld().removeObject(this);
       }
     }
+    
     public void disparaEnemigo()
     {
             GreenfootImage image = getImage();
