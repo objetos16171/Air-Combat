@@ -20,21 +20,47 @@ public class Mundo1 extends World
     private int numVidas = 3;//variable del contador de vidas del avion
     private Letrero textoVidas = null;//inicializacion de un texto para el contador de vidas
     public final int TIEMPO_ENEMIGO = 15;
+    public final int TIEMPO_ITEM = 30;
     private SimpleTimer reloj;
-    private int xe; 
+    private SimpleTimer reloji;
+    private int xe;
+    private int xi;
+    
     public Mundo1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         
         super(480, 600, 1);
         reloj = new SimpleTimer();
+        reloji = new SimpleTimer();
         prepare();
     }
     
     public void act()
     {
-        myMusic.playLoop();
-      if(reloj.millisElapsed() > 3000)
+      myMusic.playLoop();
+      llamaEnemigos();
+      llamaItem();
+    }
+    
+    public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
+    {
+       numVidas--;//reduce el numero de vidas del avion
+       if (numVidas <= 0)//verifica si se terminaron las vidas
+       {
+           textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
+           Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
+       }
+       else
+       {
+          addObject(new Avion(), 200, 560);
+          textoVidas.setText("Vidas: " + numVidas);//envia un texto para modificar el mensaje a mostrar en el letrero
+       }
+    }
+    
+    public void llamaEnemigos()
+    {
+        if(reloj.millisElapsed() > 3000)
         {
            xe = Greenfoot.getRandomNumber(3);
            if(xe == 0)
@@ -55,23 +81,27 @@ public class Mundo1 extends World
               addObject(AvE, Greenfoot.getRandomNumber(470) + 10, 10); 
            }
            reloj.mark();
-           
         }
     }
     
-    public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
+    public void llamaItem()
     {
-       numVidas--;//reduce el numero de vidas del avion
-       if (numVidas <= 0)//verifica si se terminaron las vidas
-       {
-           textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
-           Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
-       }
-       else
-       {
-          addObject(new Avion(), 200, 560);
-          textoVidas.setText("Vidas: " + numVidas);//envia un texto para modificar el mensaje a mostrar en el letrero
-       }
+       if(reloji.millisElapsed() > 15000)
+        {
+           xi = Greenfoot.getRandomNumber(2);
+           if(xi == 0)
+           {
+               BombaMej bombam = new BombaMej();
+               addObject(bombam, Greenfoot.getRandomNumber(470) + 10, 10);
+           }
+           else
+           if(xi == 1)
+           {
+              MejoraVBala mVB = new MejoraVBala();
+              addObject(mVB, Greenfoot.getRandomNumber(470) + 10, 10); 
+           }
+           reloji.mark();
+        } 
     }
 
     /*public void colocaProyectil() //coloca un proyectil para derrivar un enemigo
