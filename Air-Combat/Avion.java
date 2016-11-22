@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Avion extends Actor
 {
     private SimpleTimer reloj;
+    private int item = 0;
+    private int elapsedDisparo = 300;
     public Avion(){
         reloj = new SimpleTimer();
     }
@@ -21,11 +23,8 @@ public class Avion extends Actor
         muevete();
         dispara();
         bomba();
-        if(isTouching(Enemigos.class)||isTouching(BalaE.class)){
-            World mundo = getWorld();
-            ((Mundo1)mundo).pierdeVida();
-            getWorld().removeObject(this);
-        }
+        adquiereItem();
+        muere();
     }
     public void muevete()//metodo para realizar los movimientos del avion con las teclas
     {
@@ -45,7 +44,11 @@ public class Avion extends Actor
      */
     public void dispara()
     {
-        if(Greenfoot.isKeyDown("space") && reloj.millisElapsed() > 300)
+        if(item == 1)
+            elapsedDisparo = 200;
+        if(item == 2)
+            elapsedDisparo = 100;
+        if(Greenfoot.isKeyDown("space") && reloj.millisElapsed() > elapsedDisparo)
         {
            GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda cuando se reemplaze
            Bala bala = new Bala();
@@ -72,6 +75,27 @@ public class Avion extends Actor
         }
     }
     
+    public void muere(){
+        if(isTouching(Enemigos.class)||isTouching(BalaE.class)){
+            removeTouching(Enemigos.class);                
+            removeTouching(BalaE.class);
+            World mundo = getWorld();
+            ((Mundo1)mundo).pierdeVida();
+            setLocation(240,560);//se obtinen las variables de ubicacion del objeto
+        }
+    }
+
+    public void adquiereItem(){
+        if(isTouching(BombaMej.class)){
+            removeTouching(Item.class);
+            item = 1;
+        }
+        if(isTouching(MejoraVBala.class)){
+            removeTouching(Item.class);
+            item = 2;
+        }
+    }
+
     /**
      * metodo para mover al avion a la izquierda
      * y simula decline hacia la izquierda del mismo

@@ -21,7 +21,6 @@ public class MejoraVBala extends Item
     {
         Animacion();
         Rebota();
-        Toma();
     }
     
     public void Animacion()
@@ -52,14 +51,5 @@ public class MejoraVBala extends Item
        {
            velY=-1*velY; 
        }
-    }
-    
-    public void Toma()
-    {
-      if(isTouching(Avion.class))
-      {
-         World mundo = getWorld();
-         getWorld().removeObject(this);
-      }
     }
 }

@@ -34,7 +34,7 @@ public class Letrero extends Actor
     }
     private void updateImage()
     {
-        GreenfootImage image = new GreenfootImage(50,50);//inicializacion del cuadro de texto que se mostrara en el juego
+        GreenfootImage image = new GreenfootImage(150,50);//inicializacion del cuadro de texto que se mostrara en el juego
         image.clear();//limpia el contenido que ya tenia el cuadro de texto
         image.setColor(Color.CYAN);//color del texto
         image.drawString(texto, 5, 20);//se le asigna su contenido al cuadro de texto
