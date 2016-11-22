@@ -18,6 +18,7 @@ public class Mundo1 extends World
     private Bala bala; //se declara una clase bala
     private int proyectil; //indica que tipo de proyectil se dispara
     private int numVidas = 3;//variable del contador de vidas del avion
+    private int nucleos = 4;
     private Letrero textoVidas = null;//inicializacion de un texto para el contador de vidas
     public final int TIEMPO_ENEMIGO = 15;
     public final int TIEMPO_ITEM = 30;
@@ -45,17 +46,17 @@ public class Mundo1 extends World
     
     public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
     {
-       numVidas--;//reduce el numero de vidas del avion
-       if (numVidas <= 0)//verifica si se terminaron las vidas
-       {
-           textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
-           Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
-       }
-       else
-       {
-          addObject(new Avion(), 200, 560);
-          textoVidas.setText("Vidas: " + numVidas);//envia un texto para modificar el mensaje a mostrar en el letrero
-       }
+       nucleos --;
+       textoVidas.setText("Vidas: " + numVidas + "    Nucleos:" + nucleos);//envia un texto para modificar el mensaje a mostrar en el letrero
+       if(nucleos == 0){
+           numVidas--;//reduce el numero de vidas del avion
+           if (numVidas == 0)//verifica si se terminaron las vidas
+           {
+               textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
+               Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
+           }
+           nucleos = 4;
+       }    
     }
     
     public void llamaEnemigos()
@@ -124,8 +125,8 @@ public class Mundo1 extends World
     private void prepare()//inicializacion de los objetos
     {
         addObject(new Avion(),240,560);
-        textoVidas = new Letrero("Vidas: " + numVidas);
-        addObject(textoVidas,30,30);
-        textoVidas.setText("Vidas: " + numVidas);
+        textoVidas = new Letrero("Vidas: " + numVidas + "    Nucleos: " + nucleos);
+        addObject(textoVidas,75,30);
+        textoVidas.setText("Vidas: " + numVidas + "    Nucleos: " + nucleos);
     }
 }
