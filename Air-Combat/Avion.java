@@ -37,6 +37,8 @@ public class Avion extends Actor
             setLocation(getX(), getY()+1);//se mueve hacia abajo el avion
         if(Greenfoot.isKeyDown("up") && getY() > 40)//se verifica que se presione la tecla up y si ha golpeado la pared de arriba
             mueveteAdelante();
+        
+
     }
     /**
      * decide que clase de proyectil se dispara
@@ -56,7 +58,7 @@ public class Avion extends Actor
            ((World)mundo).addObject(bala,getX(),getY()-60); //coloca la bala justo enfrente del avion
            AvionDisparo aviond = new AvionDisparo();
            setImage(aviond.getImage()); //remplaza la imagen del avion por una que simula disparo
-           Greenfoot.delay(1); //retrazo para permitir ver la animacion
+           Greenfoot.delay(3); //retrazo para permitir ver la animacion
            setImage(image);
            reloj.mark();
         }
@@ -108,7 +110,7 @@ public class Avion extends Actor
         setImage(avionizq.getImage()); //remplaza la imagen del avion por una que simula que el avion va hacia la izquierda
         Greenfoot.delay(1); //retrazo para permitir ver la animacion
         move(-1);//se mueve hacia la izquierda el avion
-         setImage(image); //se recupera la imagen original del avion
+        setImage(image); //se recupera la imagen original del avion
     }
     
      /**
@@ -140,4 +142,20 @@ public class Avion extends Actor
         setLocation(getX(), getY()-1);//se mueve hacia adelante el avion
         setImage(image); //se recupera la imagen original del avion
     }
+
+    /**
+    * Metodo para mover al avion hacia adelante e
+    * izquierda y a la vez simula la fision del avion
+    */
+    public void mueveteAdelanteIzquierda()
+    {
+        GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda
+        AvionIzquierda avionizq = new AvionIzquierda(); //se crea un avion con sentido a lado izquierdo
+        setImage(avionizq.getImage()); //remplaza la imagen del avion por una que simula que el avion va hacia la izquierda
+        Greenfoot.delay(1); //retrazo para permitir ver la animacion
+        move(-1);//se mueve hacia la izquierda el avion
+        setLocation(getX(), getY()-1);//se mueve hacia adelante el avion
+        setImage(image); //se recupera la imagen original del avion
+    }
+
 }
