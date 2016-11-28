@@ -58,7 +58,7 @@ public class Avion extends Actor
            ((World)mundo).addObject(bala,getX(),getY()-60); //coloca la bala justo enfrente del avion
            AvionDisparo aviond = new AvionDisparo();
            setImage(aviond.getImage()); //remplaza la imagen del avion por una que simula disparo
-           Greenfoot.delay(3); //retrazo para permitir ver la animacion
+           Greenfoot.delay(1); //retrazo para permitir ver la animacion
            setImage(image);
            reloj.mark();
         }
