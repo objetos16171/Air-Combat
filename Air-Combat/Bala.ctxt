@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=Bala
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bala\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Bala\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment2.params=
-comment2.target=void\ muevete()
-numComments=3
+comment2.params=recibeGiro\ x
+comment2.target=void\ setGiro(int,\ int)
+comment3.params=
+comment3.target=void\ muevete()
+numComments=4

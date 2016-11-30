@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Helicoptero extends Enemigos
 {
     private SimpleTimer reloj;
+    private int vida = 0;
     public Helicoptero(){
         reloj = new SimpleTimer();
     }
@@ -34,13 +35,15 @@ public class Helicoptero extends Enemigos
     {
       if(isTouching(Bala.class))
       {
-         World mundo = getWorld();
+        vida++;
+        World mundo = getWorld();
+        if(vida==2)
+        {
          Explocion explo = new Explocion(); //se crea una explocion
          setImage(explo.getImage()); //pone una explocion
          Greenfoot.delay(1); //se realiza un delay para visualizar explosion
          getWorld().removeObject(this);
-        
-         
+        }
       }
       else if(isTouching(Bomba.class))
       {

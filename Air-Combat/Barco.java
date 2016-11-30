@@ -11,6 +11,7 @@ public class Barco extends Enemigos
     private int tam = 10;
     private int velX;
     private int velY = 2;
+    private int vida = 0;
     private SimpleTimer reloj;
     /**
      * Act - do whatever the eneAvion wants to do. This method is called whenever
@@ -57,11 +58,15 @@ public class Barco extends Enemigos
       }  
       else if(isTouching(Bala.class))
       {
-         World mundo = getWorld();
+        vida++;
+        World mundo = getWorld();
+        if(vida==1)
+        {
          Explocion explo = new Explocion(); //se crea una explocion
          setImage(explo.getImage()); //pone una explocion
          Greenfoot.delay(1); //se realiza un delay para visualizar explosion
          getWorld().removeObject(this);
+        }
       }
       else if(isTouching(Bomba.class)) 
       {
