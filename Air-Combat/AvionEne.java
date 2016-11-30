@@ -65,11 +65,17 @@ public class AvionEne extends Enemigos
       else if(isTouching(Bala.class))
       {
          World mundo = getWorld();
+         Explocion explo = new Explocion(); //se crea una explocion
+         setImage(explo.getImage()); //pone una explocion
+         Greenfoot.delay(1); //se realiza un delay para visualizar explosion
          getWorld().removeObject(this);
       }
       else if(isTouching(Bomba.class))
       {
          World mundo = getWorld();
+         Explocion explo = new Explocion(); //se crea una explocion
+         setImage(explo.getImage()); //pone una explocion
+         Greenfoot.delay(1); //se realiza un delay para visualizar explosion
          getWorld().removeObject(this);
       }
     }
