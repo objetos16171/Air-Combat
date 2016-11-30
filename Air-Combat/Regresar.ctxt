@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Regresar
-comment0.text=\r\n\ Es\ un\ boton\ que\ funciona\ para\ regresar\ al\ menu\ principal\r\n\ \r\n\ @author\ (jhidarthy)\ \r\n\ @version\ (27/11/2016)\r\n
+comment0.text=\n\ Es\ un\ boton\ que\ funciona\ para\ regresar\ al\ menu\ principal\n\ \n\ @author\ (jhidarthy)\ \n\ @version\ (27/11/2016)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ El\ boton\ tiene\ como\ funcion\r\n\ regresarnos\ al\ \ menu\ principal\ del\ juego\r\n
+comment1.text=\n\ El\ boton\ tiene\ como\ funcion\n\ regresarnos\ al\ \ menu\ principal\ del\ juego\n
 comment2.params=
 comment2.target=void\ click()
 numComments=3

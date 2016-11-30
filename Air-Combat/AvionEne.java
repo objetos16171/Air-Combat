@@ -11,6 +11,7 @@ public class AvionEne extends Enemigos
     private int tam = 10;
     private int velX = 2;
     private int velY = 2;
+    private int vida = 0;
     private SimpleTimer reloj;
     public AvionEne(){
         reloj = new SimpleTimer();
@@ -64,11 +65,15 @@ public class AvionEne extends Enemigos
       }
       else if(isTouching(Bala.class))
       {
-         World mundo = getWorld();
+        vida++;
+        World mundo = getWorld();
+        if(vida==3)
+        {
          Explocion explo = new Explocion(); //se crea una explocion
          setImage(explo.getImage()); //pone una explocion
          Greenfoot.delay(1); //se realiza un delay para visualizar explosion
          getWorld().removeObject(this);
+        }
       }
       else if(isTouching(Bomba.class))
       {
