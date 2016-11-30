@@ -89,7 +89,7 @@ public class Mundo1 extends World
     {
        if(reloji.millisElapsed() > 15000)
         {
-           xi = Greenfoot.getRandomNumber(2);
+           xi = Greenfoot.getRandomNumber(3);
            if(xi == 0)
            {
                BombaMej bombam = new BombaMej();
@@ -100,6 +100,11 @@ public class Mundo1 extends World
            {
               MejoraVBala mVB = new MejoraVBala();
               addObject(mVB, Greenfoot.getRandomNumber(470) + 10, 10); 
+           }
+           if(xi == 2)
+           {
+              MejoraVBala2 mVB2 = new MejoraVBala2();
+              addObject(mVB2, Greenfoot.getRandomNumber(470) + 10, 10); 
            }
            reloji.mark();
         } 
