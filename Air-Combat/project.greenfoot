@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Nov 30 15:36:30 CST 2016
+#Wed Nov 30 15:55:24 CST 2016
 target16.name=Enemigos
 dependency35.to=SimpleTimer
 editor.swing.0.y=24
@@ -140,6 +140,7 @@ target28.height=50
 class.AvionIzquierda.image=Avion PP izq.png
 target26.y=250
 target26.x=200
+class.Caza.superclass=Enemigos
 dependency20.to=AvionIzquierda
 dependency54.type=UsesDependency
 dependency51.from=JuegoNuevo
@@ -473,6 +474,7 @@ target24.name=MejoraVBala2
 dependency7.to=Barco
 class.Bomba.image=9623e3b55a1e552c536d7f10833b5735.png
 dependency12.type=UsesDependency
+class.Caza.image=fcce0516aee26e526be908af2cbe8141.png
 dependency19.type=UsesDependency
 dependency16.from=Barco
 target4.showInterface=false

@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Tanque here.
+ * Write a description of class Caza here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Tanque extends Enemigos
+public class Caza extends Enemigos
 {
     private int tam = 10;
     private int velX;
@@ -18,7 +18,7 @@ public class Tanque extends Enemigos
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public Tanque()
+    public Caza()
     {
         setLocation(Greenfoot.getRandomNumber(480), 0);
         reloj = new SimpleTimer();
@@ -41,12 +41,6 @@ public class Tanque extends Enemigos
        {
           velX=-1*velX;
        }
-            
-       //if(getY()<=tam||getY()>=480-tam)
-       //{
-       //  World mundo = getWorld();
-       //  getWorld().removeObject(this);
-       //}
     }
     
     public void elimina()
@@ -77,6 +71,7 @@ public class Tanque extends Enemigos
          getWorld().removeObject(this);
       }
     }
+    
     public void disparaEnemigo()
     {
             GreenfootImage image = getImage();
