@@ -54,6 +54,7 @@ public class Helicoptero extends Enemigos
          getWorld().removeObject(this);
       }
     }
+    
     public void disparaEnemigo()
     {
             GreenfootImage image = getImage();
