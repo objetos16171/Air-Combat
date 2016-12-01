@@ -8,6 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class JuegoNuevo extends Boton
 {
+    private SimpleTimer reloj;
+    
+    public void started()
+    {
+        reloj.mark();
+    }
+    
     /**
      * Act - do whatever the JuegoNuevo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
