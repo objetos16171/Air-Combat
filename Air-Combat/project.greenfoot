@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
-<<<<<<<=Updated\ upstream
->>>>>>>=Stashed\ changes
+<<<<<<<=HEAD
+>>>>>>>=origin/master
 class.Avion.image=Avion\ PP.png
 class.Avion.superclass=greenfoot.Actor
 class.AvionDerecha.image=Avion\ PP\ der.png
@@ -84,6 +84,12 @@ dependency1.type=UsesDependency
 dependency10.from=Enemigos
 dependency10.to=Barco
 dependency10.type=UsesDependency
+dependency100.from=Jefe
+dependency100.to=SimpleTimer
+dependency100.type=UsesDependency
+dependency101.from=Jefe
+dependency101.to=BalaE
+dependency101.type=UsesDependency
 dependency11.from=Mundo1
 dependency11.to=SimpleTimer
 dependency11.type=UsesDependency
@@ -348,20 +354,6 @@ dependency9.type=UsesDependency
 dependency90.from=Bomba
 dependency90.to=Enemigos
 dependency90.type=UsesDependency
-<<<<<<< HEAD
-dependency91.from=Avion
-dependency91.to=Jefe
-dependency91.type=UsesDependency
-dependency92.from=Jefe
-dependency92.to=SimpleTimer
-dependency92.type=UsesDependency
-dependency93.from=Jefe
-dependency93.to=BalaE
-dependency93.type=UsesDependency
-dependency94.from=Bala
-dependency94.to=Jefe
-dependency94.type=UsesDependency
-=======
 dependency91.from=Mundo1
 dependency91.to=Nucleo
 dependency91.type=UsesDependency
@@ -383,53 +375,26 @@ dependency96.type=UsesDependency
 dependency97.from=Mundo1
 dependency97.to=Menu
 dependency97.type=UsesDependency
->>>>>>> origin/master
+dependency98.from=Bala
+dependency98.to=Jefe
+dependency98.type=UsesDependency
+dependency99.from=Avion
+dependency99.to=Jefe
+dependency99.type=UsesDependency
 editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
-<<<<<<< HEAD
-editor.swing.0.height=0
-editor.swing.0.width=0
-editor.swing.0.x=0
-editor.swing.0.y=0
-=======
-<<<<<<< HEAD
 editor.swing.0.height=700
-editor.swing.0.width=701
-editor.swing.0.x=654
-editor.swing.0.y=43
-mainWindow.height=759
-mainWindow.width=1378
-mainWindow.x=-8
-mainWindow.y=0
-package.numDependencies=94
-package.numTargets=36
-=======
-<<<<<<< HEAD
-editor.swing.0.height=693
 editor.swing.0.width=700
 editor.swing.0.x=0
-editor.swing.0.y=23
-mainWindow.height=693
-mainWindow.width=893
-mainWindow.x=278
-mainWindow.y=23
-package.numDependencies=95
-=======
-editor.swing.0.height=744
-editor.swing.0.width=1382
-editor.swing.0.x=-8
-editor.swing.0.y=-8
->>>>>>> origin/master
+editor.swing.0.y=0
 mainWindow.height=744
 mainWindow.width=1378
 mainWindow.x=-8
 mainWindow.y=-8
-package.numDependencies=97
->>>>>>> origin/master
+package.numDependencies=101
 package.numTargets=41
->>>>>>> origin/master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
