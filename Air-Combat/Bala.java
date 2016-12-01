@@ -29,13 +29,11 @@ public class Bala extends Actor
         setLocation(getX()+X,getY()-velBala); //moviemiento de la bala hacia arriba
         if(isAtEdge())
         {
-            World mundo = getWorld();
-            ((Mundo1)mundo).removeObject(this); //borra la bala al llegar al borde de la pantalla
+            getWorld().removeObject(this); //borra la bala al llegar al borde de la pantalla
         }
        
-        else if(isTouching(Enemigos.class))
+        else if(isTouching(Enemigos.class) || isTouching(Jefe.class))
         {
-            World mundo = getWorld();
             getWorld().removeObject(this);
         }
     }

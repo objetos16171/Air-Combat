@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BalaE extends Actor
 {
     private int velBalaE=2; //variable para indicar la velocidad a la que se mueve la bala
+    private int X = 0;
     /**
      * Act - do whatever the BalaE wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,13 +18,16 @@ public class BalaE extends Actor
     {
         muevete(); 
     }
+    public void setGiro(int recibeGiro,int x){
+            turn(recibeGiro);
+            X = x;
+    }
     public void muevete() //metodo lograr el movimiento de la bala
     {
         setLocation(getX(),getY()+velBalaE); //moviemiento de la bala hacia arriba
         if(isAtEdge())
         {
-            World mundo = getWorld();
-            ((Mundo1)mundo).removeObject(this); //borra la bala al llegar al borde de la pantalla
+            getWorld().removeObject(this); //borra la bala al llegar al borde de la pantalla
         }
     }
 }

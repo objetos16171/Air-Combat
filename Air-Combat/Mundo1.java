@@ -77,7 +77,7 @@ public class Mundo1 extends Mundo
     
     public void creaJefe()
     {
-        if(relojj.millisElapsed() > 180000)
+        if(relojj.millisElapsed() > 200000)
         {
            Jefe jefe = new Jefe();
            addObject(jefe, Greenfoot.getRandomNumber(470) + 10, 85);

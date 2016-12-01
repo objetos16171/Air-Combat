@@ -11,6 +11,7 @@ public class Avion extends Actor
     private SimpleTimer relojBala;
     private SimpleTimer relojBomba;
     private int item = 0;
+    private int bombas = 3;
     private int elapsedDisparo = 300;
     public Avion(){
         relojBala = new SimpleTimer();
@@ -58,9 +59,6 @@ public class Avion extends Actor
                         creaImagen(4,0,-60);
                         creaImagen(4,-15,-60);
                         break;
-                case 3: creaImagen(4,15,-60);
-                        creaImagen(4,-15,-60);
-                        break;
             }
             relojBala.mark();
         }
@@ -68,15 +66,16 @@ public class Avion extends Actor
     
     public void bomba()
     {
-        if(Greenfoot.isKeyDown("b") && relojBomba.millisElapsed() > elapsedDisparo)
+        if(Greenfoot.isKeyDown("b") && relojBomba.millisElapsed() > elapsedDisparo && bombas > 0)
         {
+            bombas --;
             creaImagen(5,0,-60);
             relojBomba.mark();
         }
     }
     
     public void muere(){
-        if(isTouching(Enemigos.class)||isTouching(BalaE.class)){
+        if(isTouching(Enemigos.class) || isTouching(BalaE.class) || isTouching(Jefe.class)){
             removeTouching(Enemigos.class);                
             removeTouching(BalaE.class);
             World mundo = getWorld();
@@ -96,7 +95,7 @@ public class Avion extends Actor
         }
         if(isTouching(BombaMej.class)){
             removeTouching(Item.class);
-            item = 3;
+            bombas ++;
         }
         return item;
     }
@@ -104,7 +103,7 @@ public class Avion extends Actor
     public void creaImagen(int movimiento, int x, int y)
     {
         GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda
-                    World mundo = getWorld();
+        World mundo = getWorld();
         switch(movimiento){
             case 1: AvionIzquierda avionizq = new AvionIzquierda(); //se crea un avion con sentido a lado izquierdo
                     setImage(avionizq.getImage()); //remplaza la imagen del avion por una que simula que el avion va hacia la izquierda

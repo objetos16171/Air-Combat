@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
-<<<<<<<=HEAD
->>>>>>>=origin/master
+<<<<<<<=Updated\ upstream
+>>>>>>>=Stashed\ changes
 class.Avion.image=Avion\ PP.png
 class.Avion.superclass=greenfoot.Actor
 class.AvionDerecha.image=Avion\ PP\ der.png
@@ -76,7 +76,7 @@ class.X3.image=3.png
 class.X3.superclass=Nucleo
 class.fase2.image=fase\ 3.png
 class.fase2.superclass=Bomba
-class.fase3.image=fase\ 2.png
+class.fase3.image=fase\ 3.png
 class.fase3.superclass=Bomba
 dependency1.from=Avion
 dependency1.to=Bala
@@ -348,20 +348,34 @@ dependency9.type=UsesDependency
 dependency90.from=Bomba
 dependency90.to=Enemigos
 dependency90.type=UsesDependency
+<<<<<<< HEAD
+dependency91.from=Avion
+dependency91.to=Jefe
+dependency91.type=UsesDependency
+dependency92.from=Jefe
+dependency92.to=SimpleTimer
+dependency92.type=UsesDependency
+dependency93.from=Jefe
+dependency93.to=BalaE
+dependency93.type=UsesDependency
+dependency94.from=Bala
+dependency94.to=Jefe
+dependency94.type=UsesDependency
+=======
 dependency91.from=Mundo1
 dependency91.to=Nucleo
 dependency91.type=UsesDependency
 dependency92.from=Mundo1
-dependency92.to=X1
+dependency92.to=X0
 dependency92.type=UsesDependency
 dependency93.from=Mundo1
-dependency93.to=X2
+dependency93.to=X1
 dependency93.type=UsesDependency
 dependency94.from=Mundo1
-dependency94.to=X3
+dependency94.to=X2
 dependency94.type=UsesDependency
 dependency95.from=Mundo1
-dependency95.to=X0
+dependency95.to=X3
 dependency95.type=UsesDependency
 dependency96.from=Mundo1
 dependency96.to=Regresar
@@ -369,20 +383,53 @@ dependency96.type=UsesDependency
 dependency97.from=Mundo1
 dependency97.to=Menu
 dependency97.type=UsesDependency
+>>>>>>> origin/master
 editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=0
 editor.swing.0.width=0
 editor.swing.0.x=0
 editor.swing.0.y=0
+=======
+<<<<<<< HEAD
+editor.swing.0.height=700
+editor.swing.0.width=701
+editor.swing.0.x=654
+editor.swing.0.y=43
+mainWindow.height=759
+mainWindow.width=1378
+mainWindow.x=-8
+mainWindow.y=0
+package.numDependencies=94
+package.numTargets=36
+=======
+<<<<<<< HEAD
+editor.swing.0.height=693
+editor.swing.0.width=700
+editor.swing.0.x=0
+editor.swing.0.y=23
+mainWindow.height=693
+mainWindow.width=893
+mainWindow.x=278
+mainWindow.y=23
+package.numDependencies=95
+=======
+editor.swing.0.height=744
+editor.swing.0.width=1382
+editor.swing.0.x=-8
+editor.swing.0.y=-8
+>>>>>>> origin/master
 mainWindow.height=744
 mainWindow.width=1378
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=97
+>>>>>>> origin/master
 package.numTargets=41
+>>>>>>> origin/master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -652,8 +699,8 @@ target39.showInterface=false
 target39.type=ClassTarget
 target39.typeParameters=
 target39.width=80
-target39.x=10
-target39.y=730
+target39.x=110
+target39.y=550
 target4.height=50
 target4.name=Mundo
 target4.showInterface=false
@@ -668,7 +715,7 @@ target40.showInterface=false
 target40.type=ClassTarget
 target40.typeParameters=
 target40.width=80
-target40.x=110
+target40.x=200
 target40.y=550
 target41.height=50
 target41.name=BalaE
@@ -676,8 +723,8 @@ target41.showInterface=false
 target41.type=ClassTarget
 target41.typeParameters=
 target41.width=80
-target41.x=200
-target41.y=550
+target41.x=10
+target41.y=730
 target5.height=50
 target5.name=Nucleo
 target5.showInterface=false
