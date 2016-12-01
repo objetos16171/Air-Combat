@@ -39,24 +39,26 @@ public class Jefe extends Actor
        {
           vida++;
           World mundo = getWorld();
-          if(vida==800)
+          if(vida==1000)
           {
             Explocion explo = new Explocion(); //se crea una explocion
             setImage(explo.getImage()); //pone una explocion
             Greenfoot.delay(1); //se realiza un delay para visualizar explosion
             getWorld().removeObject(this);
+            Greenfoot.stop();
           }
        }
        else if(isTouching(Bomba.class))
         {
           vida++;
           World mundo = getWorld();
-          if(vida==800)
+          if(vida==1000)
           {
              Explocion explo = new Explocion(); //se crea una explocion
              setImage(explo.getImage()); //pone una explocion
              Greenfoot.delay(1); //se realiza un delay para visualizar explosion
              getWorld().removeObject(this);
+             Greenfoot.stop();
           }
         }
     }
