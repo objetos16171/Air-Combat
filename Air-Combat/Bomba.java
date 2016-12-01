@@ -26,9 +26,9 @@ public class Bomba extends Actor
         {
             GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda
             
-            fase2 f2 = new fase2(); ///se crea nuevo objero fase2
+            fase3 f2 = new fase3(); ///se crea nuevo objero fase2
             setImage( f2.getImage());//se reemplaza la imagen por la de fase 2
-            fase3 f3 = new fase3(); ///se crea nuevo objero fase3
+            fase2 f3 = new fase2(); ///se crea nuevo objero fase3
             setImage( f3.getImage());//se reemplaza la imagen por la de fase 3
             Greenfoot.delay(2); //delay para ver la animacion
             World mundo = getWorld();
