@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mundo1 extends World
+public class Mundo1 extends Mundo
 {
 
     /**
@@ -22,8 +22,11 @@ public class Mundo1 extends World
     private Letrero textoVidas = null;//inicializacion de un texto para el contador de vidas
     public final int TIEMPO_ENEMIGO = 15;
     public final int TIEMPO_ITEM = 30;
+    public final int TIEMPO_NIVEL = 60;
     private SimpleTimer reloj;
     private SimpleTimer reloji;
+    private SimpleTimer relojn;
+    private int xn = 0;
     private int xe;
     private int xi;
     
@@ -31,7 +34,8 @@ public class Mundo1 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         
-        super(480, 600, 1);
+        //super(480, 600, 1);
+        relojn = new SimpleTimer();
         reloj = new SimpleTimer();
         reloji = new SimpleTimer();
         prepare();
@@ -42,6 +46,29 @@ public class Mundo1 extends World
       myMusic.playLoop();
       llamaEnemigos();
       llamaItem();
+      if(relojn.millisElapsed() > 1000)
+        {
+           xn++;
+           relojn.mark();
+        }
+      
+      if(xn == 60)
+        {
+          GreenfootImage Fondo2 = new GreenfootImage("Fondo.jpg");
+          setBackground(Fondo2);
+        }
+        
+      if(xn == 120)
+      {
+          GreenfootImage Fondo3 = new GreenfootImage("Fondo.jpg");
+          setBackground(Fondo3);
+      }
+      
+      if(xn == 180)
+      {
+          GreenfootImage Fondo4 = new GreenfootImage("Fondo.jpg");
+          setBackground(Fondo4);
+      }
     }
     
     public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto

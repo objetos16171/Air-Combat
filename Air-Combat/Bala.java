@@ -32,6 +32,7 @@ public class Bala extends Actor
             World mundo = getWorld();
             ((Mundo1)mundo).removeObject(this); //borra la bala al llegar al borde de la pantalla
         }
+       
         else if(isTouching(Enemigos.class))
         {
             World mundo = getWorld();

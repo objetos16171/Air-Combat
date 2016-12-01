@@ -49,12 +49,19 @@ class.MejoraBala.superclass=Item
 class.MejoraVBala.superclass=Item
 class.MejoraVBala2.superclass=Item
 class.Menu.image=Fondo\ menu.png
+<<<<<<< HEAD
 class.Menu.superclass=greenfoot.World
 class.Mundo.superclass=greenfoot.World
 class.Mundo1.image=Fondo-de-pantalla-Reef-Nebula.jpg
 class.Mundo1.superclass=greenfoot.World
 class.Mundo2.image=Fondo.jpg
 class.Mundo2.superclass=greenfoot.World
+=======
+class.Menu.superclass=Mundo
+class.Mundo.superclass=greenfoot.World
+class.Mundo1.image=Fondo-de-pantalla-Reef-Nebula.jpg
+class.Mundo1.superclass=Mundo
+>>>>>>> origin/master
 class.Regresar.image=RegresarN.png
 class.Regresar.superclass=Boton
 class.RegresarP.image=RegresarP.png
@@ -63,9 +70,13 @@ class.SimpleTimer.superclass=
 class.Tanque.image=EWE.png
 class.Tanque.superclass=Enemigos
 class.WAyuda.image=fondo\ mundo\ ayuda.png
+<<<<<<< HEAD
 class.WAyuda.superclass=greenfoot.World
 class.fase2.superclass=Bomba
 class.fase3.superclass=Bomba
+=======
+class.WAyuda.superclass=Mundo
+>>>>>>> origin/master
 dependency1.from=Avion
 dependency1.to=Bala
 dependency1.type=UsesDependency
@@ -123,6 +134,7 @@ dependency25.type=UsesDependency
 dependency26.from=BombaMej
 dependency26.to=BalaE
 dependency26.type=UsesDependency
+<<<<<<< HEAD
 dependency27.from=Menu
 dependency27.to=JuegoNuevo
 dependency27.type=UsesDependency
@@ -131,10 +143,21 @@ dependency28.to=Ayuda
 dependency28.type=UsesDependency
 dependency29.from=AvionEne
 dependency29.to=Avion
+=======
+dependency27.from=AvionEne
+dependency27.to=Avion
+dependency27.type=UsesDependency
+dependency28.from=Helicoptero
+dependency28.to=SimpleTimer
+dependency28.type=UsesDependency
+dependency29.from=Helicoptero
+dependency29.to=BalaE
+>>>>>>> origin/master
 dependency29.type=UsesDependency
 dependency3.from=Mundo1
 dependency3.to=Bala
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=Helicoptero
 dependency30.to=SimpleTimer
 dependency30.type=UsesDependency
@@ -164,10 +187,42 @@ dependency38.to=Bomba
 dependency38.type=UsesDependency
 dependency39.from=Avion
 dependency39.to=AvionDerecha
+=======
+dependency30.from=Bomba
+dependency30.to=Mundo1
+dependency30.type=UsesDependency
+dependency31.from=AvionEne
+dependency31.to=BalaE
+dependency31.type=UsesDependency
+dependency32.from=AvionEne
+dependency32.to=Bomba
+dependency32.type=UsesDependency
+dependency33.from=Avion
+dependency33.to=SimpleTimer
+dependency33.type=UsesDependency
+dependency34.from=Barco
+dependency34.to=BalaE
+dependency34.type=UsesDependency
+dependency35.from=Avion
+dependency35.to=Mundo1
+dependency35.type=UsesDependency
+dependency36.from=Avion
+dependency36.to=Bomba
+dependency36.type=UsesDependency
+dependency37.from=Avion
+dependency37.to=AvionDerecha
+dependency37.type=UsesDependency
+dependency38.from=Avion
+dependency38.to=Enemigos
+dependency38.type=UsesDependency
+dependency39.from=Avion
+dependency39.to=BalaE
+>>>>>>> origin/master
 dependency39.type=UsesDependency
 dependency4.from=Mundo1
 dependency4.to=Avion
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency40.from=Avion
 dependency40.to=Enemigos
 dependency40.type=UsesDependency
@@ -197,10 +252,42 @@ dependency48.to=AyudaP
 dependency48.type=UsesDependency
 dependency49.from=JuegoNuevo
 dependency49.to=WAyuda
+=======
+dependency40.from=MejoraVBala
+dependency40.to=Avion
+dependency40.type=UsesDependency
+dependency41.from=Mundo1
+dependency41.to=BombaMej
+dependency41.type=UsesDependency
+dependency42.from=Mundo1
+dependency42.to=MejoraVBala
+dependency42.type=UsesDependency
+dependency43.from=BalaE
+dependency43.to=Mundo1
+dependency43.type=UsesDependency
+dependency44.from=Ayuda
+dependency44.to=WAyuda
+dependency44.type=UsesDependency
+dependency45.from=Ayuda
+dependency45.to=AyudaP
+dependency45.type=UsesDependency
+dependency46.from=JuegoNuevo
+dependency46.to=AyudaP
+dependency46.type=UsesDependency
+dependency47.from=JuegoNuevo
+dependency47.to=WAyuda
+dependency47.type=UsesDependency
+dependency48.from=JuegoNuevo
+dependency48.to=JuegoNuevoP
+dependency48.type=UsesDependency
+dependency49.from=JuegoNuevo
+dependency49.to=Mundo1
+>>>>>>> origin/master
 dependency49.type=UsesDependency
 dependency5.from=Avion
 dependency5.to=AvionDisparo
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 dependency50.from=JuegoNuevo
 dependency50.to=JuegoNuevoP
 dependency50.type=UsesDependency
@@ -230,10 +317,42 @@ dependency58.to=Regresar
 dependency58.type=UsesDependency
 dependency59.from=Regresar
 dependency59.to=RegresarP
+=======
+dependency50.from=AvionEne
+dependency50.to=SimpleTimer
+dependency50.type=UsesDependency
+dependency51.from=Barco
+dependency51.to=SimpleTimer
+dependency51.type=UsesDependency
+dependency52.from=Avion
+dependency52.to=BombaMej
+dependency52.type=UsesDependency
+dependency53.from=Avion
+dependency53.to=Item
+dependency53.type=UsesDependency
+dependency54.from=Avion
+dependency54.to=MejoraVBala
+dependency54.type=UsesDependency
+dependency55.from=MejoraVBala
+dependency55.to=GifImage
+dependency55.type=UsesDependency
+dependency56.from=WAyuda
+dependency56.to=Regresar
+dependency56.type=UsesDependency
+dependency57.from=Regresar
+dependency57.to=RegresarP
+dependency57.type=UsesDependency
+dependency58.from=Helicoptero
+dependency58.to=AvionFision
+dependency58.type=UsesDependency
+dependency59.from=Helicoptero
+dependency59.to=Explocion
+>>>>>>> origin/master
 dependency59.type=UsesDependency
 dependency6.from=Mundo1
 dependency6.to=Letrero
 dependency6.type=UsesDependency
+<<<<<<< HEAD
 dependency60.from=Regresar
 dependency60.to=Menu
 dependency60.type=UsesDependency
@@ -263,10 +382,42 @@ dependency68.to=Explocion
 dependency68.type=UsesDependency
 dependency69.from=Jefe
 dependency69.to=Bala
+=======
+dependency60.from=AvionEne
+dependency60.to=Explocion
+dependency60.type=UsesDependency
+dependency61.from=Barco
+dependency61.to=Explocion
+dependency61.type=UsesDependency
+dependency62.from=MejoraVBala2
+dependency62.to=GifImage
+dependency62.type=UsesDependency
+dependency63.from=Mundo1
+dependency63.to=MejoraVBala2
+dependency63.type=UsesDependency
+dependency64.from=Avion
+dependency64.to=MejoraVBala2
+dependency64.type=UsesDependency
+dependency65.from=Jefe
+dependency65.to=Explocion
+dependency65.type=UsesDependency
+dependency66.from=Jefe
+dependency66.to=Bala
+dependency66.type=UsesDependency
+dependency67.from=Jefe
+dependency67.to=Bomba
+dependency67.type=UsesDependency
+dependency68.from=Bala
+dependency68.to=Enemigos
+dependency68.type=UsesDependency
+dependency69.from=Tanque
+dependency69.to=SimpleTimer
+>>>>>>> origin/master
 dependency69.type=UsesDependency
 dependency7.from=Mundo1
 dependency7.to=Barco
 dependency7.type=UsesDependency
+<<<<<<< HEAD
 dependency70.from=Jefe
 dependency70.to=Bomba
 dependency70.type=UsesDependency
@@ -296,10 +447,42 @@ dependency78.to=Explocion
 dependency78.type=UsesDependency
 dependency79.from=Caza
 dependency79.to=BalaE
+=======
+dependency70.from=Tanque
+dependency70.to=Explocion
+dependency70.type=UsesDependency
+dependency71.from=Tanque
+dependency71.to=BalaE
+dependency71.type=UsesDependency
+dependency72.from=Tanque
+dependency72.to=Bala
+dependency72.type=UsesDependency
+dependency73.from=Tanque
+dependency73.to=Bomba
+dependency73.type=UsesDependency
+dependency74.from=Caza
+dependency74.to=SimpleTimer
+dependency74.type=UsesDependency
+dependency75.from=Caza
+dependency75.to=Explocion
+dependency75.type=UsesDependency
+dependency76.from=Caza
+dependency76.to=BalaE
+dependency76.type=UsesDependency
+dependency77.from=Caza
+dependency77.to=Bala
+dependency77.type=UsesDependency
+dependency78.from=Caza
+dependency78.to=Bomba
+dependency78.type=UsesDependency
+dependency79.from=Mundo1
+dependency79.to=Explocion
+>>>>>>> origin/master
 dependency79.type=UsesDependency
 dependency8.from=AvionEne
 dependency8.to=Mundo1
 dependency8.type=UsesDependency
+<<<<<<< HEAD
 dependency80.from=Caza
 dependency80.to=Bala
 dependency80.type=UsesDependency
@@ -321,6 +504,32 @@ dependency85.type=UsesDependency
 dependency86.from=JuegoNuevo
 dependency86.to=SimpleTimer
 dependency86.type=UsesDependency
+=======
+dependency80.from=Mundo1
+dependency80.to=BalaE
+dependency80.type=UsesDependency
+dependency81.from=Mundo1
+dependency81.to=Bomba
+dependency81.type=UsesDependency
+dependency82.from=Mundo1
+dependency82.to=JuegoNuevoP
+dependency82.type=UsesDependency
+dependency83.from=JuegoNuevo
+dependency83.to=SimpleTimer
+dependency83.type=UsesDependency
+dependency84.from=Mundo1
+dependency84.to=Jefe
+dependency84.type=UsesDependency
+dependency85.from=Menu
+dependency85.to=JuegoNuevo
+dependency85.type=UsesDependency
+dependency86.from=Menu
+dependency86.to=Ayuda
+dependency86.type=UsesDependency
+dependency87.from=Regresar
+dependency87.to=Menu
+dependency87.type=UsesDependency
+>>>>>>> origin/master
 dependency9.from=Enemigos
 dependency9.to=SimpleTimer
 dependency9.type=UsesDependency
@@ -331,6 +540,7 @@ editor.fx.0.y=0
 editor.swing.0.height=0
 editor.swing.0.width=0
 editor.swing.0.x=0
+<<<<<<< HEAD
 editor.swing.0.y=0
 mainWindow.height=744
 mainWindow.width=1378
@@ -338,6 +548,15 @@ mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=86
 package.numTargets=36
+=======
+editor.swing.0.y=23
+mainWindow.height=693
+mainWindow.width=893
+mainWindow.x=278
+mainWindow.y=23
+package.numDependencies=87
+package.numTargets=34
+>>>>>>> origin/master
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -354,55 +573,100 @@ target1.width=80
 target1.x=200
 target1.y=370
 target10.height=50
+<<<<<<< HEAD
 target10.name=fase3
+=======
+target10.name=AvionEne
+>>>>>>> origin/master
 target10.showInterface=false
 target10.type=ClassTarget
 target10.typeParameters=
 target10.width=80
+<<<<<<< HEAD
 target10.x=190
 target10.y=730
 target11.height=50
 target11.name=AvionEne
+=======
+target10.x=70
+target10.y=70
+target11.height=50
+target11.name=AvionIzquierda
+>>>>>>> origin/master
 target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
 target11.width=80
+<<<<<<< HEAD
 target11.x=70
 target11.y=70
 target12.height=50
 target12.name=fase2
+=======
+target11.x=10
+target11.y=490
+target12.height=50
+target12.name=Barco
+>>>>>>> origin/master
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
 target12.width=80
 target12.x=10
+<<<<<<< HEAD
 target12.y=790
 target13.height=50
 target13.name=AvionIzquierda
+=======
+target12.y=130
+target13.height=50
+target13.name=Boton
+>>>>>>> origin/master
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
 target13.width=80
+<<<<<<< HEAD
 target13.x=10
 target13.y=490
 target14.height=50
 target14.name=Barco
+=======
+target13.x=130
+target13.y=310
+target14.height=50
+target14.name=Item
+>>>>>>> origin/master
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
 target14.width=80
+<<<<<<< HEAD
 target14.x=10
 target14.y=130
 target15.height=50
 target15.name=Boton
+=======
+target14.x=110
+target14.y=370
+target15.height=50
+target15.name=AvionFision
+>>>>>>> origin/master
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
 target15.width=80
+<<<<<<< HEAD
 target15.x=130
 target15.y=310
 target16.height=50
 target16.name=Item
+=======
+target15.x=10
+target15.y=370
+target16.height=50
+target16.name=Ayuda
+>>>>>>> origin/master
 target16.showInterface=false
 target16.type=ClassTarget
 target16.typeParameters=
@@ -410,11 +674,16 @@ target16.width=80
 target16.x=110
 target16.y=370
 target17.height=50
+<<<<<<< HEAD
 target17.name=AvionFision
+=======
+target17.name=Avion
+>>>>>>> origin/master
 target17.showInterface=false
 target17.type=ClassTarget
 target17.typeParameters=
 target17.width=80
+<<<<<<< HEAD
 target17.x=10
 target17.y=370
 target18.height=50
@@ -427,12 +696,31 @@ target18.x=110
 target18.y=370
 target19.height=50
 target19.name=Avion
+=======
+target17.x=70
+target17.y=10
+target18.height=50
+target18.name=Enemigos
+target18.showInterface=false
+target18.type=ClassTarget
+target18.typeParameters=
+target18.width=90
+target18.x=10
+target18.y=250
+target19.height=50
+target19.name=Menu
+>>>>>>> origin/master
 target19.showInterface=false
 target19.type=ClassTarget
 target19.typeParameters=
 target19.width=80
+<<<<<<< HEAD
 target19.x=70
 target19.y=10
+=======
+target19.x=190
+target19.y=490
+>>>>>>> origin/master
 target2.height=50
 target2.name=Helicoptero
 target2.showInterface=false
@@ -442,6 +730,7 @@ target2.width=100
 target2.x=10
 target2.y=190
 target20.height=50
+<<<<<<< HEAD
 target20.name=Enemigos
 target20.showInterface=false
 target20.type=ClassTarget
@@ -521,6 +810,87 @@ target29.typeParameters=
 target29.width=80
 target29.x=190
 target29.y=130
+=======
+target20.name=AvionDerecha
+target20.showInterface=false
+target20.type=ClassTarget
+target20.typeParameters=
+target20.width=110
+target20.x=10
+target20.y=310
+target21.height=50
+target21.name=MejoraVBala
+target21.showInterface=false
+target21.type=ClassTarget
+target21.typeParameters=
+target21.width=100
+target21.x=10
+target21.y=430
+target22.height=50
+target22.name=Letrero
+target22.showInterface=false
+target22.type=ClassTarget
+target22.typeParameters=
+target22.width=80
+target22.x=160
+target22.y=10
+target23.height=50
+target23.name=WAyuda
+target23.showInterface=false
+target23.type=ClassTarget
+target23.typeParameters=
+target23.width=80
+target23.x=10
+target23.y=610
+target24.height=50
+target24.name=RegresarP
+target24.showInterface=false
+target24.type=ClassTarget
+target24.typeParameters=
+target24.width=90
+target24.x=100
+target24.y=610
+target25.height=50
+target25.name=SimpleTimer
+target25.showInterface=false
+target25.type=ClassTarget
+target25.typeParameters=
+target25.width=100
+target25.x=120
+target25.y=190
+target26.height=50
+target26.name=MejoraVBala2
+target26.showInterface=false
+target26.type=ClassTarget
+target26.typeParameters=
+target26.width=100
+target26.x=10
+target26.y=670
+target27.height=50
+target27.name=Mundo1
+target27.showInterface=false
+target27.type=ClassTarget
+target27.typeParameters=
+target27.width=80
+target27.x=190
+target27.y=130
+target28.height=50
+target28.name=GifImage
+target28.showInterface=false
+target28.type=ClassTarget
+target28.typeParameters=
+target28.width=80
+target28.x=200
+target28.y=250
+target29.height=50
+target29.name=JuegoNuevo
+target29.showInterface=false
+target29.type=ClassTarget
+target29.typeParameters=
+target29.width=90
+target29.x=10
+target29.y=550
+>>>>>>> origin/master
 target3.height=50
 target3.name=Tanque
 target3.showInterface=false
@@ -530,11 +900,16 @@ target3.width=80
 target3.x=120
 target3.y=670
 target30.height=50
+<<<<<<< HEAD
 target30.name=GifImage
+=======
+target30.name=Regresar
+>>>>>>> origin/master
 target30.showInterface=false
 target30.type=ClassTarget
 target30.typeParameters=
 target30.width=80
+<<<<<<< HEAD
 target30.x=200
 target30.y=250
 target31.height=50
@@ -547,26 +922,55 @@ target31.x=10
 target31.y=550
 target32.height=50
 target32.name=Regresar
+=======
+target30.x=120
+target30.y=430
+target31.height=50
+target31.name=Jefe
+target31.showInterface=false
+target31.type=ClassTarget
+target31.typeParameters=
+target31.width=80
+target31.x=100
+target31.y=490
+target32.height=50
+target32.name=Caza
+>>>>>>> origin/master
 target32.showInterface=false
 target32.type=ClassTarget
 target32.typeParameters=
 target32.width=80
+<<<<<<< HEAD
 target32.x=120
 target32.y=430
 target33.height=50
 target33.name=Jefe
+=======
+target32.x=10
+target32.y=730
+target33.height=50
+target33.name=AyudaP
+>>>>>>> origin/master
 target33.showInterface=false
 target33.type=ClassTarget
 target33.typeParameters=
 target33.width=80
+<<<<<<< HEAD
 target33.x=100
 target33.y=490
 target34.height=50
 target34.name=Caza
+=======
+target33.x=110
+target33.y=550
+target34.height=50
+target34.name=BalaE
+>>>>>>> origin/master
 target34.showInterface=false
 target34.type=ClassTarget
 target34.typeParameters=
 target34.width=80
+<<<<<<< HEAD
 target34.x=10
 target34.y=730
 target35.height=50
@@ -585,13 +989,21 @@ target36.typeParameters=
 target36.width=80
 target36.x=200
 target36.y=550
+=======
+target34.x=200
+target34.y=550
+>>>>>>> origin/master
 target4.height=50
 target4.name=Mundo
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
 target4.width=80
+<<<<<<< HEAD
 target4.x=100
+=======
+target4.x=190
+>>>>>>> origin/master
 target4.y=730
 target5.height=50
 target5.name=AvionDisparo
