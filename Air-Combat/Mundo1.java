@@ -108,15 +108,27 @@ public class Mundo1 extends Mundo
        }
        if(nucleos == 0){
            numVidas--;//reduce el numero de vidas del avion
+           X0 nuc0 = new X0();
+           nucx4.setImage(nuc0.getImage()); //remplaza la imagen por x1
            if (numVidas == 0)//verifica si se terminaron las vidas
            {
-               textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
-               X0 nuc0 = new X0();
                nucx4.setImage(nuc0.getImage());
-               Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
+               textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
+               Regresar regresar = new Regresar();
+               addObject(regresar,242,592);
+               regresar.setLocation(238,584);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               myMusic.stop();
+               Greenfoot.setWorld(new Menu()); //regresa al menu
            }
+           else
+           {
            nucleos = 4;
            nucx4.setImage(nucaux.getImage());
+         }
        }    
     }
     
