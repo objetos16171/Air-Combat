@@ -26,9 +26,11 @@ public class Mundo1 extends Mundo
     private SimpleTimer reloj;
     private SimpleTimer reloji;
     private SimpleTimer relojn;
+    private SimpleTimer relojj;
     private int xn = 0;
     private int xe;
     private int xi;
+    private int xj;
     
     public Mundo1()
     {    
@@ -38,6 +40,7 @@ public class Mundo1 extends Mundo
         relojn = new SimpleTimer();
         reloj = new SimpleTimer();
         reloji = new SimpleTimer();
+        relojj = new SimpleTimer();
         prepare();
     }
     
@@ -46,6 +49,7 @@ public class Mundo1 extends Mundo
       myMusic.playLoop();
       llamaEnemigos();
       llamaItem();
+      creaJefe();
       if(relojn.millisElapsed() > 1000)
         {
            xn++;
@@ -69,6 +73,17 @@ public class Mundo1 extends Mundo
           GreenfootImage Fondo4 = new GreenfootImage("Fondo.jpg");
           setBackground(Fondo4);
       }
+    }
+    
+    public void creaJefe()
+    {
+        if(relojj.millisElapsed() > 180000)
+        {
+           Jefe jefe = new Jefe();
+           addObject(jefe, Greenfoot.getRandomNumber(470) + 10, 85);
+           relojj.mark();
+        }
+
     }
     
     public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
