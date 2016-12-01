@@ -43,6 +43,7 @@ public class Jefe extends Actor
     {
        if(isTouching(Bala.class))
        {
+<<<<<<< HEAD
            vida++;
        }
        if(isTouching(Bomba.class))
@@ -69,6 +70,31 @@ public class Jefe extends Actor
             creaImagen(90,55);
             creaImagen(-90,55);
             reloj.mark();
+=======
+          vida++;
+          World mundo = getWorld();
+          if(vida==1000)
+          {
+            Explocion explo = new Explocion(); //se crea una explocion
+            setImage(explo.getImage()); //pone una explocion
+            Greenfoot.delay(1); //se realiza un delay para visualizar explosion
+            getWorld().removeObject(this);
+            Greenfoot.stop();
+          }
+       }
+       else if(isTouching(Bomba.class))
+        {
+          vida++;
+          World mundo = getWorld();
+          if(vida==1000)
+          {
+             Explocion explo = new Explocion(); //se crea una explocion
+             setImage(explo.getImage()); //pone una explocion
+             Greenfoot.delay(1); //se realiza un delay para visualizar explosion
+             getWorld().removeObject(this);
+             Greenfoot.stop();
+          }
+>>>>>>> origin/master
         }
     }
     

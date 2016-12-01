@@ -13,7 +13,7 @@ public class Mundo1 extends Mundo
      * Constructor for objects of class MyWorld.
      * 
      */
-
+    Nucleo nucx4 = new Nucleo();
     GreenfootSound myMusic = new GreenfootSound("M1.mp3");
     private Bala bala; //se declara una clase bala
     private int proyectil; //indica que tipo de proyectil se dispara
@@ -58,26 +58,26 @@ public class Mundo1 extends Mundo
       
       if(xn == 60)
         {
-          GreenfootImage Fondo2 = new GreenfootImage("Fondo.jpg");
+          GreenfootImage Fondo2 = new GreenfootImage("Fondo2.jpg");
           setBackground(Fondo2);
         }
         
       if(xn == 120)
       {
-          GreenfootImage Fondo3 = new GreenfootImage("Fondo.jpg");
+          GreenfootImage Fondo3 = new GreenfootImage("Fondo3.jpg");
           setBackground(Fondo3);
       }
       
       if(xn == 180)
       {
-          GreenfootImage Fondo4 = new GreenfootImage("Fondo.jpg");
+          GreenfootImage Fondo4 = new GreenfootImage("Fondo4.jpg");
           setBackground(Fondo4);
       }
     }
     
     public void creaJefe()
     {
-        if(relojj.millisElapsed() > 180000)
+        if(relojj.millisElapsed() > 200000)
         {
            Jefe jefe = new Jefe();
            addObject(jefe, Greenfoot.getRandomNumber(470) + 10, 85);
@@ -88,16 +88,47 @@ public class Mundo1 extends Mundo
     
     public void pierdeVida()//metodo para reducir el contador de vidas y cambiar el texto
     {
+       Nucleo nucaux = new Nucleo(); //guarda la imagen actual del contador
        nucleos --;
        textoVidas.setText("Vidas: " + numVidas + "    Nucleos:" + nucleos);//envia un texto para modificar el mensaje a mostrar en el letrero
+       switch (nucleos) {
+
+        case 0 : X0 nuc0 = new X0();
+                 nucx4.setImage(nuc0.getImage()); //remplaza la imagen por x1
+                 break;
+        case 1 : X1 nuc1 = new X1();
+                 nucx4.setImage(nuc1.getImage()); //remplaza la imagen por x1
+                 break;
+        case 2 : X2 nuc2 = new X2();
+                 nucx4.setImage(nuc2.getImage());
+                 break;
+        case 3 : X3 nuc3 = new X3();
+                 nucx4.setImage(nuc3.getImage());
+                 break;
+       }
        if(nucleos == 0){
            numVidas--;//reduce el numero de vidas del avion
+           X0 nuc0 = new X0();
+           nucx4.setImage(nuc0.getImage()); //remplaza la imagen por x1
            if (numVidas == 0)//verifica si se terminaron las vidas
            {
+               nucx4.setImage(nuc0.getImage());
                textoVidas.setText("Perdiste");//envia un texto para modificar el mensaje a mostrar en el letrero
-               Greenfoot.stop();//se detiene el juego al perder todas las vidas del avion
+               Regresar regresar = new Regresar();
+               addObject(regresar,242,592);
+               regresar.setLocation(238,584);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               Greenfoot.delay(3);
+               myMusic.stop();
+               Greenfoot.setWorld(new Menu()); //regresa al menu
            }
+           else
+           {
            nucleos = 4;
+           nucx4.setImage(nucaux.getImage());
+         }
        }    
     }
     
@@ -172,8 +203,13 @@ public class Mundo1 extends Mundo
     private void prepare()//inicializacion de los objetos
     {
         addObject(new Avion(),240,560);
-        textoVidas = new Letrero("Vidas: " + numVidas + "    Nucleos: " + nucleos);
+        textoVidas = new Letrero("Vidas: " + numVidas);
         addObject(textoVidas,75,30);
-        textoVidas.setText("Vidas: " + numVidas + "    Nucleos: " + nucleos);
+        textoVidas.setText("Vidas: " + numVidas);
+        addObject(nucx4,144,27);
+        nucx4.setLocation(220,16);
+        textoVidas.setLocation(93,28);
+        nucx4.setLocation(158,18);
+        nucx4.setLocation(156,19);
     }
 }
