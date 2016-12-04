@@ -2,7 +2,7 @@
 PROJECT TITLE: 
 Air Combat
 
-PURPOSE OF PROJECT: El juego consiste en aviones que destruyen aviones enemigos en distintos escenarios.
+PURPOSE OF PROJECT: El juego consiste que el jugador debe destruir aviones enemigos en distintos escenarios.
   
 
 VERSION or DATE: 
