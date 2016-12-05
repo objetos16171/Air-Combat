@@ -44,11 +44,6 @@ public class AvionEne extends Enemigos
           velY=-1*velY;
        }
             
-       if(getY()-tam<=tam)
-       {
-          velY=-1*velY;
-       }
-            
        //if(getY()<=tam||getY()>=480-tam)
        //{
        //   World mundo = getWorld();

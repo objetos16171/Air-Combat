@@ -29,6 +29,9 @@ public class Avion extends Actor
         adquiereItem();
         muere();
     }
+    public void setItem(int valor){
+        item = valor;
+    }
     public void muevete()//metodo para realizar los movimientos del avion con las teclas
     {
         setLocation(getX(), getY());//se obtinen las variables de ubicacion del objeto

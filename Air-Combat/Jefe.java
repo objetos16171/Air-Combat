@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jefe extends Actor
 {
+    private SimpleTimer reloj;
     private int tam = 10;
     private int velX = 2;
     private int velY;
@@ -17,9 +18,14 @@ public class Jefe extends Actor
      * Act - do whatever the Jefe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Jefe(){
+        reloj = new SimpleTimer();
+    }
+    
     public void act() 
     {
         muevete();
+        disparaEnemigo();
         elimina();
     } 
     
@@ -37,29 +43,46 @@ public class Jefe extends Actor
     {
        if(isTouching(Bala.class))
        {
-          vida++;
-          World mundo = getWorld();
-          if(vida==800)
-          {
-            Explocion explo = new Explocion(); //se crea una explocion
-            setImage(explo.getImage()); //pone una explocion
-            Greenfoot.delay(1); //se realiza un delay para visualizar explosion
-            getWorld().removeObject(this);
-            Greenfoot.stop();
-          }
+           vida++;
        }
-       else if(isTouching(Bomba.class))
-        {
-          vida++;
-          World mundo = getWorld();
-          if(vida==800)
-          {
+       if(isTouching(Bomba.class))
+       {
+           vida += 5;
+       }
+       if(vida==1000)
+       {
+           explosion();
+       }
+    }
+    public void explosion(){
              Explocion explo = new Explocion(); //se crea una explocion
              setImage(explo.getImage()); //pone una explocion
              Greenfoot.delay(1); //se realiza un delay para visualizar explosion
-             getWorld().removeObject(this);
+             getWorld().removeObject(this);        
              Greenfoot.stop();
-          }
+    }
+    
+    public void disparaEnemigo()
+    {
+        if(reloj.millisElapsed() > 1500){
+            creaImagen(30,95);
+            creaImagen(-30,95);
+            creaImagen(90,55);
+            creaImagen(-90,55);
+            reloj.mark();
         }
+    }
+    
+    public void creaImagen(int x, int y)
+    {
+        GreenfootImage image = getImage(); //guarda la imagen actual del avion para que no se pierda
+        World mundo = getWorld();
+        BalaE bala = new BalaE();
+        ((World)mundo).addObject(bala,getX()+x,getY()+y); //coloca la bala justo enfrente del avion
+        if(x == 90)
+            bala.setGiro(30,2);
+        if(x == -90)
+            bala.setGiro(-30,-2);
+        setImage(image); //se recupera la imagen original del avion
     }
 }

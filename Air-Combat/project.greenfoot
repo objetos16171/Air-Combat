@@ -100,9 +100,21 @@ dependency101.type=UsesDependency
 dependency102.from=Menu
 dependency102.to=CreditosN
 dependency102.type=UsesDependency
+<<<<<<< HEAD
 dependency103.from=Creditos
 dependency103.to=Regresar
 dependency103.type=UsesDependency
+=======
+dependency103.from=CreditosN
+dependency103.to=CreditosP
+dependency103.type=UsesDependency
+dependency104.from=CreditosN
+dependency104.to=Creditos
+dependency104.type=UsesDependency
+dependency105.from=Creditos
+dependency105.to=Regresar
+dependency105.type=UsesDependency
+>>>>>>> origin/master
 dependency11.from=Mundo1
 dependency11.to=SimpleTimer
 dependency11.type=UsesDependency
@@ -399,14 +411,22 @@ editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
 editor.swing.0.height=700
+<<<<<<< HEAD
 editor.swing.0.width=701
+=======
+editor.swing.0.width=700
+>>>>>>> origin/master
 editor.swing.0.x=0
 editor.swing.0.y=0
 mainWindow.height=744
 mainWindow.width=1382
 mainWindow.x=-8
 mainWindow.y=-8
+<<<<<<< HEAD
 package.numDependencies=103
+=======
+package.numDependencies=105
+>>>>>>> origin/master
 package.numTargets=45
 project.charset=UTF-8
 readme.height=58

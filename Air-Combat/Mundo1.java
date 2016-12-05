@@ -31,6 +31,8 @@ public class Mundo1 extends Mundo
     private int xe;
     private int xi;
     private int xj;
+    private int hayjefe = 0;
+    Avion avion = new Avion();
     
     public Mundo1()
     {    
@@ -49,7 +51,6 @@ public class Mundo1 extends Mundo
       myMusic.playLoop();
       llamaEnemigos();
       llamaItem();
-      creaJefe();
       if(relojn.millisElapsed() > 1000)
         {
            xn++;
@@ -109,6 +110,7 @@ public class Mundo1 extends Mundo
        if(nucleos == 0){
            numVidas--;//reduce el numero de vidas del avion
            X0 nuc0 = new X0();
+           avion.setItem(0);
            nucx4.setImage(nuc0.getImage()); //remplaza la imagen por x1
            if (numVidas == 0)//verifica si se terminaron las vidas
            {
@@ -130,11 +132,16 @@ public class Mundo1 extends Mundo
            nucx4.setImage(nucaux.getImage());
          }
        }    
-    }
-    
+    }    
     public void llamaEnemigos()
     {
-        if(reloj.millisElapsed() > 3000)
+        if(relojj.millisElapsed() > 200000 && hayjefe == 0){
+           Jefe jefe = new Jefe();
+           addObject(jefe, Greenfoot.getRandomNumber(470) + 10, 85);
+           hayjefe = 1;
+           relojj.mark();
+        }
+        if(reloj.millisElapsed() > 3000 && hayjefe == 0)
         {
            xe = Greenfoot.getRandomNumber(3);
            if(xe == 0)
@@ -202,7 +209,7 @@ public class Mundo1 extends Mundo
      */
     private void prepare()//inicializacion de los objetos
     {
-        addObject(new Avion(),240,560);
+        addObject(avion,240,560);
         textoVidas = new Letrero("Vidas: " + numVidas);
         addObject(textoVidas,75,30);
         textoVidas.setText("Vidas: " + numVidas);

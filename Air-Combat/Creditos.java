@@ -17,6 +17,7 @@ public class Creditos extends Mundo
     {
         prepare();
     }
+<<<<<<< HEAD
 
     /**
      * Prepare the world for the start of the program.
@@ -27,5 +28,12 @@ public class Creditos extends Mundo
         Regresar regresar = new Regresar();
         addObject(regresar,262,552);
         regresar.setLocation(250,552);
+=======
+    private void prepare()
+    {
+        Regresar regresar = new Regresar();
+        addObject(regresar,242,592);
+        regresar.setLocation(238,584);
+>>>>>>> origin/master
     }
 }
