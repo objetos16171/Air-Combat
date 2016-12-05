@@ -15,5 +15,12 @@ public class Creditos extends Mundo
      */
     public Creditos()
     {
+        prepare();
+    }
+    private void prepare()
+    {
+        Regresar regresar = new Regresar();
+        addObject(regresar,242,592);
+        regresar.setLocation(238,584);
     }
 }

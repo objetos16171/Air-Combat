@@ -24,7 +24,7 @@ public class BalaE extends Actor
     }
     public void muevete() //metodo lograr el movimiento de la bala
     {
-        setLocation(getX(),getY()+velBalaE); //moviemiento de la bala hacia arriba
+        setLocation(getX()+X,getY()+velBalaE); //moviemiento de la bala hacia arriba
         if(isAtEdge())
         {
             getWorld().removeObject(this); //borra la bala al llegar al borde de la pantalla

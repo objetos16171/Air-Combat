@@ -36,20 +36,7 @@ public class MejoraVBala extends Item
        {
           velX=-1*velX;
        }
-            
-       if(getY()-tam<=tam)
-       {
-          velY=-1*velY;
-       }
-            
-       if(getY()-tam<=tam)
-       {
-          velY=-1*velY;
-       }
-       
-       if(getY()<=tam||getY()>=580)
-       {
-           velY=-1*velY; 
-       }
+       if(getY() >= 599)
+            getWorld().removeObject(this);
     }
 }
