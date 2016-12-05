@@ -15,5 +15,17 @@ public class Creditos extends Mundo
      */
     public Creditos()
     {
+        prepare();
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Regresar regresar = new Regresar();
+        addObject(regresar,262,552);
+        regresar.setLocation(250,552);
     }
 }
