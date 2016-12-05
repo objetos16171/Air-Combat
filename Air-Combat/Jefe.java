@@ -49,7 +49,7 @@ public class Jefe extends Actor
        {
            vida += 5;
        }
-       if(vida==1000)
+       if(vida>=800)
        {
            explosion();
        }
