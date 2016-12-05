@@ -35,5 +35,8 @@ public class Menu extends Mundo
         addObject(ayuda,241,324);
         ayuda.setLocation(229,324);
         ayuda.setLocation(234,310);
+        CreditosN creditosn = new CreditosN();
+        addObject(creditosn,241,382);
+        creditosn.setLocation(234,376);
     }
 }
